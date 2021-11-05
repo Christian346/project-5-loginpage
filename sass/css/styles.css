@@ -1,16 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(500px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-      grid-template-areas: " container-1 container-2 ";
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("/images/bg-intro-desktop.png");
+  background-size: cover;
+  background-color: #ff7a7a;
 }
 
 .container-1 {
-  grid-area: "container-1";
+  background-color: none;
+  width: 60%;
+  margin: 5em;
 }
 
 .container-2 {
-  grid-area: "container-2";
+  background-color: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 50vh;
+  width: 70%;
+  margin: 4em;
+  margin-top: 0em;
+}
+
+.header {
+  color: white;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.paragraph {
+  color: white;
+  font-size: 0.7rem;
+}
+
+.final-p {
+  color: #b9b6d3;
+  font-size: 0.48rem;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.final-p a {
+  color: #bc1a1a;
+}
+
+.btn {
+  padding: 13px;
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  -webkit-box-shadow: 1px 5px 2px rgba(87, 80, 119, 0.5);
+          box-shadow: 1px 5px 2px rgba(87, 80, 119, 0.5);
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.first-btn {
+  background-color: #6055a5;
+}
+
+.form {
+  height: 80vh;
+  background-color: white;
+  -webkit-box-shadow: 1px 5px 2px rgba(87, 80, 119, 0.5);
+          box-shadow: 1px 5px 2px rgba(87, 80, 119, 0.5);
+  border-radius: 7px;
+}
+
+.inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1em;
+}
+
+.inputs input {
+  margin-bottom: 0.7em;
+  padding: 0.8em;
+  color: #b9b6d3;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.inputs input:focus, .inputs input:active {
+  color: black;
+}
+
+.second-btn {
+  background-color: #38cc8c;
+  width: 90%;
+  margin-left: 1.5em;
 }
 /*# sourceMappingURL=styles.css.map */

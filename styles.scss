@@ -1,20 +1,147 @@
 html{
-
+    //height:100%;
 }
+
+*{
+    margin:0;
+    padding:0;
+}
+
+ // ### Primary
+ $Red:hsl(0, 100%, 74%);
+ $Green:hsl(154, 59%, 51%);
+ //### Accent
+ 
+ $Blue:hsl(248, 32%, 49%);
+ 
+// ### Neutral
+ 
+ $DarkBlue:hsl(249, 10%, 26%) ;
+ $GrayishBlue:hsl(246, 25%, 77%);
 
 body{
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-grid-template-areas: "
-container-1 container-2
-";
+   height: 100vh;
+   width: 100vw;
+    // Font
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    //grid-auto-rows:22rem;// new rows will be 22 rem each
+                                             // si lo haces pequeno coge 100%
+    grid-template-columns: repeat(auto-fit, minmax(/*min(80%,100%)*/15rem, 1fr));
+   // grid-template-areas: 
+   //"container1 container2"
+   //;
+   justify-content: center;
+   align-items: center;
+
+
+    background-image:url("/images/bg-intro-desktop.png") ;
+    background-size: cover;
+    background-color:$Red;
+
+    
 
 }
+//.master-container{
+//display: flex;
+//flex-direction: row;
+//}
+
 .container-1{
-    grid-area: "container-1";
+   // grid-area: container1; 
+   background-color:none;
+    width:60%;
+    margin:5em;
+   
+  
+}
+
+.container-2{
+    //  grid-area: container2;
+    background-color:none;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width:70%;
+    margin:4em;
+    margin-top:0em;
+}
+
+.header{
+color:hsl(0, 0%, 100%);
+line-height:1.2em;
+margin-bottom: 0.5em;
+}
+
+.paragraph{
+    color:hsl(0, 0%, 100%);
+    font-size: 0.7rem;
+}
+.final-p{
+    color: $GrayishBlue;
+    font-size: 0.48rem;
+    margin-bottom:2em;
+    text-align:center;
+}
+.final-p a{
+    color:hsl(0, 76%, 42%)
+    
+    
+}
+.btn{
+    padding: 13px;
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: 7px;
+    border:none;
+    color:white; 
+    box-shadow: 1px 5px 2px hsla(251, 20%, 39% , .5); //a for opacity
+    font-weight:bold;
+    font-size: 0.7rem;
+}
+.btn a{
+    text-decoration: none;
+    color:white;
+    font-weight:bold;
+    font-size: 0.7rem;
+}
+.first-btn{
+    background-color:$Blue;
 
 }
-.container-2{
-    grid-area: "container-2";
+.form{
+    height: 80vh;
+    background-color:hsl(0, 0%, 100%);
+    box-shadow: 1px 5px 2px hsla(251, 20%, 39% , .5); //a for opacity
+    border-radius: 7px;
 }
+.inputs{
+    display: flex;
+    flex-direction: column;
+    margin:1em;
+}
+.inputs input{
+    margin-bottom:0.7em;
+    padding:0.8em;
+    color:$GrayishBlue;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+.inputs input:focus, .inputs input:active{
+    color:black
+}
+
+
+.second-btn{
+    background-color:$Green;
+    width: 90%;
+    margin-left:1.5em;
+
+}
+
+
+
+  
+  
 
