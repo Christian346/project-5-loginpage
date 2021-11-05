@@ -1,0 +1,20 @@
+html{
+
+}
+
+body{
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+grid-template-areas: "
+container-1 container-2
+";
+
+}
+.container-1{
+    grid-area: "container-1";
+
+}
+.container-2{
+    grid-area: "container-2";
+}
+
