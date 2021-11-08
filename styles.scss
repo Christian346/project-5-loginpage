@@ -85,7 +85,8 @@ margin-bottom: 0.5em;
     text-align:center;
 }
 .final-p a{
-    color:hsl(0, 76%, 42%)
+    color:hsl(0, 76%, 42%);
+    text-decoration:none;
      
 }
 .btn{
@@ -100,6 +101,7 @@ margin-bottom: 0.5em;
     font-size: 0.7rem;
 }
 .btn a{
+    font-weight: normal;
     text-decoration: none;
     color:white;
     font-size: 0.7rem;
@@ -119,13 +121,43 @@ margin-bottom: 0.5em;
     flex-direction: column;
     margin:1em;
 }
+
 .inputs input{
-    margin-bottom:0.7em;
+    width: 93%; 
     padding:0.8em;
     color:$GrayishBlue;
     font-size: 0.7rem;
     font-weight: bold;
+    
 }
+//dissapears start
+.denied{
+    color:$Red;
+    font-style:italic;
+    font-size: 0.5rem;  
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.1em;
+    margin-left:2.5em;
+   width:93%;
+}
+
+.errorwrap{
+   display: flex;
+   justify-content: flex-end;
+   width: 1%;
+   margin-left:96%;
+   margin-top: -26px;
+   margin-bottom: 10px;
+   //background-color: red;
+}
+.errorwrap .exc{
+    width:18px;
+}
+//dissapears ends 
+
+
+
 .inputs input:focus, .inputs input:active{
     color:black
 }
@@ -135,9 +167,12 @@ margin-bottom: 0.5em;
     background-color:$Green;
     width: 90%;
     margin-left:1.5em;
+    margin-top: 1em;
 
 }
 //cell media query
+
+
 @media screen and (max-width:376px) {
     .header{
         font-size: 1.5rem;
@@ -153,7 +188,6 @@ margin-bottom: 0.5em;
         }
 
         .btn a{
-            font-weight: normal;
             line-height: 1.3rem;
         }
         .break::after{
@@ -177,17 +211,28 @@ margin-bottom: 0.5em;
         .inputs input{
             padding:1.1em;  
         }
+        
+
         .second-btn{
-            width: 100%;
-            margin-left:0em;
+            width: 90%;
+            margin-left:1.6em;
+            margin-top:-0.2em;
         }
         
-        .final-p{
-            
+        .final-p{  
             font-size: 0.6rem;
-            margin-top:-2em;
-            margin-bottom: 3.5em; 
+            margin-top:-1em;
+            margin-bottom: 3em; 
+            line-height: 1.5rem;
         }
+
+        .errorwrap{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -29px;
+            margin-bottom: 10px;
+         }
+         
 }
 
 

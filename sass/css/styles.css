@@ -64,6 +64,7 @@ body {
 
 .final-p a {
   color: #bc1a1a;
+  text-decoration: none;
 }
 
 .btn {
@@ -80,6 +81,7 @@ body {
 }
 
 .btn a {
+  font-weight: normal;
   text-decoration: none;
   color: white;
   font-size: 0.7rem;
@@ -109,11 +111,43 @@ body {
 }
 
 .inputs input {
-  margin-bottom: 0.7em;
+  width: 93%;
   padding: 0.8em;
   color: #b9b6d3;
   font-size: 0.7rem;
   font-weight: bold;
+}
+
+.denied {
+  color: #ff7a7a;
+  font-style: italic;
+  font-size: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 0.1em;
+  margin-left: 2.5em;
+  width: 93%;
+}
+
+.errorwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 1%;
+  margin-left: 96%;
+  margin-top: -26px;
+  margin-bottom: 10px;
+}
+
+.errorwrap .exc {
+  width: 18px;
 }
 
 .inputs input:focus, .inputs input:active {
@@ -124,6 +158,7 @@ body {
   background-color: #38cc8c;
   width: 90%;
   margin-left: 1.5em;
+  margin-top: 1em;
 }
 
 @media screen and (max-width: 376px) {
@@ -138,7 +173,6 @@ body {
     margin-bottom: 2em;
   }
   .btn a {
-    font-weight: normal;
     line-height: 1.3rem;
   }
   .break::after {
@@ -160,13 +194,25 @@ body {
     padding: 1.1em;
   }
   .second-btn {
-    width: 100%;
-    margin-left: 0em;
+    width: 90%;
+    margin-left: 1.6em;
+    margin-top: -0.2em;
   }
   .final-p {
     font-size: 0.6rem;
-    margin-top: -2em;
-    margin-bottom: 3.5em;
+    margin-top: -1em;
+    margin-bottom: 3em;
+    line-height: 1.5rem;
+  }
+  .errorwrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: -29px;
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -34,17 +34,46 @@
         <div class= "form">
             <form action="">
             <div class="inputs">
+
+                
                 <input type="text" name = "Firstname" id ="firstName" value ="First Name">
+                <div class="errorwrap">
+                    <img src="/images/icon-error.svg" alt="" class="exc">
+                   </div>
+                <p class="denied"> First Name cannot be empty</p>
+                 
+
+                <input type="text"  id ="lastName" value ="Last Name">
+                <div class="errorwrap">
+                    <img src="/images/icon-error.svg" alt="" class="exc">
+                </div>
+                
+                <p class="denied"> Last Name cannot be empty</p>
             
-                <input type="text" name = "Lastname" id ="lastName" value ="Last Name">
-            
-                <input type="text" name = "firstname" id ="Email" value ="Email Address">
+                <input type="text"  id ="Email" value ="Email Address">
+               
+                <div class="errorwrap">
+                    <img src="/images/icon-error.svg" alt="" class="exc">
+                </div>
+
+                <p class="denied">
+                    Looks like this is not an email
+                </p>
          
-                <input type="text" name = "firstname" id ="passWord" value ="Password">
-           
-                <button class="btn second-btn">CLAIM YOUR FREE TRIAL</button>
+               
+                <input type="text"  id ="passWord" value ="Password">
+                   <div class="errorwrap">
+                    <img src="/images/icon-error.svg" alt="" class="exc">
+                   </div>
+
+                    <p class="denied">Password cannot be empty </p>
+               
             </div>
+
+            <button class="btn second-btn" type="submit">CLAIM YOUR FREE TRIAL</button>
+
             <p class="final-p">By clicking the button you are agreeing to<span class="break"></span> our <a href="#">Terms and Services</a></p>
+
             </form>
         </div>
     </div>
