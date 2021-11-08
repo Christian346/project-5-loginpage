@@ -86,8 +86,7 @@ margin-bottom: 0.5em;
 }
 .final-p a{
     color:hsl(0, 76%, 42%)
-    
-    
+     
 }
 .btn{
     padding: 13px;
@@ -103,7 +102,6 @@ margin-bottom: 0.5em;
 .btn a{
     text-decoration: none;
     color:white;
-    font-weight:bold;
     font-size: 0.7rem;
 }
 .first-btn{
@@ -139,7 +137,58 @@ margin-bottom: 0.5em;
     margin-left:1.5em;
 
 }
+//cell media query
+@media screen and (max-width:376px) {
+    .header{
+        font-size: 1.5rem;
+        }
 
+        .paragraph{
+            text-align: center;
+        }
+
+        .btn{
+            padding: 15px; 
+            margin-bottom: 2em;
+        }
+
+        .btn a{
+            font-weight: normal;
+            line-height: 1.3rem;
+        }
+        .break::after{
+            content: "\a";
+            white-space: pre;
+        }
+    
+        .first-btn{
+            width: 128%;
+            margin-left:-4em;
+        }
+
+        .form{
+            width:127%;
+            margin-left:-2.7em;
+        }
+
+        .container-2{
+            margin-top:-4.7em;
+        }
+        .inputs input{
+            padding:1.1em;  
+        }
+        .second-btn{
+            width: 100%;
+            margin-left:0em;
+        }
+        
+        .final-p{
+            
+            font-size: 0.6rem;
+            margin-top:-2em;
+            margin-bottom: 3.5em; 
+        }
+}
 
 
   
