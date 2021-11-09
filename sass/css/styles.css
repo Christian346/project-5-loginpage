@@ -147,7 +147,12 @@ body {
 }
 
 .errorwrap .exc {
+  display: block;
   width: 18px;
+}
+
+.active {
+  display: block;
 }
 
 .inputs input:focus, .inputs input:active {

@@ -128,6 +128,7 @@ margin-bottom: 0.5em;
     color:$GrayishBlue;
     font-size: 0.7rem;
     font-weight: bold;
+   // margin-bottom: .5em;
     
 }
 //dissapears start
@@ -140,6 +141,7 @@ margin-bottom: 0.5em;
     margin-bottom: 0.1em;
     margin-left:2.5em;
    width:93%;
+  // display: block;
 }
 
 .errorwrap{
@@ -149,13 +151,19 @@ margin-bottom: 0.5em;
    margin-left:96%;
    margin-top: -26px;
    margin-bottom: 10px;
-   //background-color: red;
+   //display:block;
 }
 .errorwrap .exc{
+    display:block;
     width:18px;
 }
 //dissapears ends 
 
+//activated with js
+.active{
+    display: block;
+}
+//activated ends
 
 
 .inputs input:focus, .inputs input:active{

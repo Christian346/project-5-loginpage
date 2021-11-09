@@ -32,45 +32,32 @@
         </div>
 
         <div class= "form">
-            <form action="">
+            <form action="/" method="get">
             <div class="inputs">
 
-                
-                <input type="text" name = "Firstname" id ="firstName" value ="First Name">
-                <div class="errorwrap">
-                    <img src="images/icon-error.svg" alt="" class="exc">
-                   </div>
+                <input type="text" name = "Firstname" id ="firstName" value="First Name" > 
+                <div class="errorwrap"><img src="images/icon-error.svg" alt="" class="exc"></div>
                 <p class="denied"> First Name cannot be empty</p>
                  
 
                 <input type="text"  id ="lastName" value ="Last Name">
-                <div class="errorwrap">
-                    <img src="images/icon-error.svg" alt="" class="exc">
-                </div>
-                
-                <p class="denied"> Last Name cannot be empty</p>
+                <div class="errorwrap"> <img src="images/icon-error.svg" alt="" class="exc"></div>
+                 <p class="denied"> Last Name cannot be empty</p>
             
-                <input type="text"  id ="Email" value ="Email Address">
-               
-                <div class="errorwrap">
-                    <img src="images/icon-error.svg" alt="" class="exc">
-                </div>
-
-                <p class="denied">
-                    Looks like this is not an email
-                </p>
+                <input type="text"  id ="Email" type="email" value ="Email Address">
+                <div class="errorwrap"> <img src="images/icon-error.svg" alt="" class="exc"></div>
+                <p class="denied">Looks like this is not an email</p>
          
                
-                <input type="text"  id ="passWord" value ="Password">
-                   <div class="errorwrap">
-                    <img src="images/icon-error.svg" alt="" class="exc">
-                   </div>
+                <input type="text"  id ="passWord" type ="password" value ="Password">
+                <div class="errorwrap"><img src="images/icon-error.svg" alt="" class="exc"></div>
+                <p class="denied">Password cannot be empty </p>
 
-                    <p class="denied">Password cannot be empty </p>
+                <button class="btn second-btn" id ="submitted"type="submit">CLAIM YOUR FREE TRIAL</button>
                
             </div>
 
-            <button class="btn second-btn" type="submit">CLAIM YOUR FREE TRIAL</button>
+           
 
             <p class="final-p">By clicking the button you are agreeing to<span class="break"></span> our <a href="#">Terms and Services</a></p>
 
