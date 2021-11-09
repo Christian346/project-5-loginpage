@@ -128,7 +128,7 @@ margin-bottom: 0.5em;
     color:$GrayishBlue;
     font-size: 0.7rem;
     font-weight: bold;
-   // margin-bottom: .5em;
+    margin-bottom: 1em;
     
 }
 //dissapears start
@@ -138,20 +138,24 @@ margin-bottom: 0.5em;
     font-size: 0.5rem;  
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 0.1em;
+    margin-top: -.5em;
     margin-left:2.5em;
-   width:93%;
-  // display: block;
+    width:93%;
+   
+   display:none ;
+   
 }
 
 .errorwrap{
    display: flex;
    justify-content: flex-end;
    width: 1%;
-   margin-left:96%;
-   margin-top: -26px;
+   margin-left:94%;
+   margin-top: -37px;
    margin-bottom: 10px;
-   //display:block;
+
+   display:none;
+
 }
 .errorwrap .exc{
     display:block;
@@ -160,9 +164,9 @@ margin-bottom: 0.5em;
 //dissapears ends 
 
 //activated with js
-.active{
-    display: block;
-}
+//.active{
+//    display: block;
+//}
 //activated ends
 
 

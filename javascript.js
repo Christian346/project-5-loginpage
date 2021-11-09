@@ -13,7 +13,12 @@ let email = document.querySelector("#Email").value
 let password = document.querySelector("#passWord").value
 //console.log(password)
 
-let form = document.querySelector(".form")// select the whole form
+let form = document.querySelector("#form")// select the whole form
+
+
+let errorMsg = document.querySelectorAll('.errorwrap')//select errorwrap classes
+
+let deniedMsg = document.querySelectorAll('.denied')//selects all denied classes
 
 //inner variables
 var mailvalidation = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -22,22 +27,50 @@ var mailvalidation = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+
 
 form.addEventListener('submit' , (e)=>{
 
-if(firstname === '' || firstname == null ){
-console.log(" First name cannot be empty") 
+    //firtname
+if(firstname === '' || firstname == null || firstname == "First Name"){
+errorMsg[0].style.display = 'flex'; 
+deniedMsg[0].style.display = 'flex'; 
+}
+else{
+
+    errorMsg[0].style.display ="none";
+    deniedMsg[0].style.display = 'none'; 
+    window.location.reload(true);
+}
+//lastname
+if(lastname === '' || lastname == null){
+    errorMsg[1].style.display = 'flex'; 
+    deniedMsg[1].style.display = 'flex'; 
+}
+else{
+    errorMsg[1].style.display ="none";
+    deniedMsg[1].style.display = 'none'; 
 }
 
-if(lastname === '' || lastname == null){
-    console.log(" Last name cannot be empty") 
- }
-
- if (!mailvalidation.test(email))
-    { 
-        console.log("this is not a valid email")
-    } 
+//email
+ if (!mailvalidation.test(email)){ 
+    errorMsg[2].style.display = 'flex'; 
+    deniedMsg[2].style.display = 'flex'; 
+}
+else{
+    errorMsg[2].style.display ="none";
+    deniedMsg[2].style.display = 'none'; 
+}
+ 
+ //password
  if(password === '' || password == null){
-     console.log("Password cannot be empty")
- }   
-       
+    errorMsg[3].style.display = 'flex'; 
+    deniedMsg[3].style.display = 'flex'; 
+}
+else{
+    errorMsg[3].style.display ="none";
+    deniedMsg[3].style.display = 'none'; 
+}
+    
 
-e.preventDefault()
+//refresh method 
+
+e.preventDefault()//prevent from submitting
+
 })

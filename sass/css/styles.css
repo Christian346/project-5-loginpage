@@ -116,6 +116,7 @@ body {
   color: #b9b6d3;
   font-size: 0.7rem;
   font-weight: bold;
+  margin-bottom: 1em;
 }
 
 .denied {
@@ -128,9 +129,10 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 0.1em;
+  margin-top: -.5em;
   margin-left: 2.5em;
   width: 93%;
+  display: none;
 }
 
 .errorwrap {
@@ -141,18 +143,15 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 1%;
-  margin-left: 96%;
-  margin-top: -26px;
+  margin-left: 94%;
+  margin-top: -37px;
   margin-bottom: 10px;
+  display: none;
 }
 
 .errorwrap .exc {
   display: block;
   width: 18px;
-}
-
-.active {
-  display: block;
 }
 
 .inputs input:focus, .inputs input:active {
