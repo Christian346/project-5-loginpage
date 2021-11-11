@@ -111,7 +111,7 @@ body {
 }
 
 .inputs input {
-  width: 93%;
+  width: 90%;
   padding: 0.8em;
   color: #b9b6d3;
   font-size: 0.7rem;
@@ -130,7 +130,7 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: -.5em;
-  margin-left: 2.5em;
+  margin-left: 1.6em;
   width: 93%;
   display: none;
 }
@@ -143,7 +143,7 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 1%;
-  margin-left: 94%;
+  margin-left: 93%;
   margin-top: -37px;
   margin-bottom: 10px;
   display: none;
@@ -152,6 +152,11 @@ body {
 .errorwrap .exc {
   display: block;
   width: 18px;
+}
+
+.inputs-error {
+  border: 2px solid #ff7a7a;
+  border-radius: 2px;
 }
 
 .inputs input:focus, .inputs input:active {

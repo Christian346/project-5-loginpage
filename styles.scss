@@ -123,7 +123,7 @@ margin-bottom: 0.5em;
 }
 
 .inputs input{
-    width: 93%; 
+    width:90%; 
     padding:0.8em;
     color:$GrayishBlue;
     font-size: 0.7rem;
@@ -131,6 +131,10 @@ margin-bottom: 0.5em;
     margin-bottom: 1em;
     
 }
+
+
+
+
 //dissapears start
 .denied{
     color:$Red;
@@ -139,7 +143,7 @@ margin-bottom: 0.5em;
     display: flex;
     justify-content: flex-end;
     margin-top: -.5em;
-    margin-left:2.5em;
+    margin-left:1.6em;
     width:93%;
    
    display:none ;
@@ -150,7 +154,7 @@ margin-bottom: 0.5em;
    display: flex;
    justify-content: flex-end;
    width: 1%;
-   margin-left:94%;
+   margin-left:93%;
    margin-top: -37px;
    margin-bottom: 10px;
 
@@ -161,6 +165,14 @@ margin-bottom: 0.5em;
     display:block;
     width:18px;
 }
+
+
+
+ .inputs-error {
+    border: 2px solid $Red;
+    border-radius:2px;
+ }
+
 //dissapears ends 
 
 //activated with js
