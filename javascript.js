@@ -18,7 +18,7 @@ let inputs = document.querySelectorAll('.input')// selects all inputs
 
 //obj
 let expresiones = {
-    nombre: /^[a-zA-Z ]{2,30}$/,
+    nombre: /^[a-zA-Z ]{1,30}$/,
     segundonom: /^[a-zA-Z ]{2,30}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password:/^\d{2,20}$/
