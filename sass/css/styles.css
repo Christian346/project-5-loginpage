@@ -99,6 +99,10 @@ body {
   margin-bottom: 4em;
 }
 
+.input {
+  color: #b9b6d3;
+}
+
 .inputs {
   display: -webkit-box;
   display: -ms-flexbox;

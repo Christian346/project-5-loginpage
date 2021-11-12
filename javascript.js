@@ -18,8 +18,8 @@ let inputs = document.querySelectorAll('.input')// selects all inputs
 
 //obj
 let expresiones = {
-    nombre: /^[a-zA-Z ]{1,30}$/,
-    segundonom: /^[a-zA-Z ]{2,30}$/,
+    nombre: /^[a-zA-Z ]{1,30}$/,    // will except a name with at least two characters\s   
+    segundonom: /^[A-Za-z0-9\'\s\.\,]+$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password:/^[a-zA-Z0-9]{1,20}$/
     
@@ -44,14 +44,12 @@ const validar= (e) =>{
     switch (e.target.name){
 
         case "Firstname":
-            if(expresiones.nombre.test(e.target.value)){
+            if(!e.target.value == null || !e.target.value == ""){
                 
                 errorMsg[0].style.display ="none";
-                deniedMsg[0].style.display = 'none'; 
-                
+                deniedMsg[0].style.display = 'none';   
                 document.getElementById('firstName').classList.remove('inputs-error')//step 2 
                 //could add another green class if you were to enter correct 
-        
                 //switch campo to true
                 campos.nombre = true;
                 }
@@ -144,11 +142,16 @@ inputs.forEach((input)=>{
 
 //addevent listener for submit with button
 form.addEventListener('submit' , (e)=>{
-e.preventDefault();
+
+ if(!campos.nombre && !campos.segundonom && !campos.email && !campos.password)   {
+    alert(" certain fields are empty please fill them to continue")
+    //make error display of field is empty  
+ }
+
 if(campos.nombre && campos.segundonom && campos.email && campos.password){
     form.reset(); // will reset all campos if everything is alright
     alert("Login was succesful!")
 }
-
+e.preventDefault();
 })
  
