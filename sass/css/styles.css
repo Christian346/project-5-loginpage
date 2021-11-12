@@ -29,6 +29,17 @@ body {
   margin: 5em;
 }
 
+.header {
+  color: white;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.paragraph {
+  color: white;
+  font-size: 1rem;
+}
+
 .container-2 {
   background-color: none;
   display: -webkit-box;
@@ -38,27 +49,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 50vh;
+  height: 80vh;
   width: 70%;
   margin: 4em;
-  margin-top: 0em;
-}
-
-.header {
-  color: white;
-  line-height: 1.2em;
-  margin-bottom: 0.5em;
-}
-
-.paragraph {
-  color: white;
-  font-size: 0.7rem;
+  margin-top: 5em;
 }
 
 .final-p {
   color: #b9b6d3;
-  font-size: 0.48rem;
-  margin-bottom: 2em;
+  font-size: 0.68rem;
+  margin-bottom: 3em;
+  margin-top: -1em;
   text-align: center;
 }
 
@@ -77,18 +78,19 @@ body {
   -webkit-box-shadow: 1px 5px 2px rgba(87, 80, 119, 0.5);
           box-shadow: 1px 5px 2px rgba(87, 80, 119, 0.5);
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .btn a {
   font-weight: normal;
   text-decoration: none;
   color: white;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .first-btn {
   background-color: #6055a5;
+  padding: 2em;
 }
 
 .form {
@@ -107,30 +109,32 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 1em;
+  margin: 1.2em;
+  margin-left: 1.4em;
 }
 
 .inputs input {
   width: 90%;
-  padding: 0.8em;
+  padding: 1.6em;
   color: #b9b6d3;
   font-size: 0.7rem;
   font-weight: bold;
-  margin-bottom: 1em;
+  margin-bottom: 4em;
 }
 
 .denied {
   color: #ff7a7a;
   font-style: italic;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-top: -.5em;
-  margin-left: 1.6em;
+  margin-top: 1em;
+  margin-bottom: 3.8em;
+  margin-left: 2em;
   width: 93%;
   display: none;
 }
@@ -143,8 +147,8 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 1%;
-  margin-left: 93%;
-  margin-top: -37px;
+  margin-left: 94%;
+  margin-top: -5em;
   margin-bottom: 10px;
   display: none;
 }
@@ -165,63 +169,78 @@ body {
 
 .second-btn {
   background-color: #38cc8c;
-  width: 90%;
-  margin-left: 1.5em;
-  margin-top: 1em;
+  padding: 1.5em;
+  width: 99%;
+  margin-left: 0em;
+  margin-top: -2em;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 376px) {
+  body {
+    background-image: url("../../images/bg-intro-mobile.png");
+  }
   .header {
-    font-size: 1.5rem;
+    margin-top: 1em;
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
   .paragraph {
+    width: 100%;
     text-align: center;
+    margin-bottom: 15em;
+    font-size: 0.9rem;
   }
   .btn {
     padding: 15px;
     margin-bottom: 2em;
   }
   .btn a {
-    line-height: 1.3rem;
+    line-height: 1.5rem;
   }
   .break::after {
     content: "\a";
     white-space: pre;
   }
   .first-btn {
-    width: 128%;
-    margin-left: -4em;
+    width: 126%;
+    margin-left: -3.5em;
+    padding: 1em;
+  }
+  .btn a {
+    font-size: 1rem;
   }
   .form {
-    width: 127%;
+    height: 48vh;
+    width: 125%;
     margin-left: -2.7em;
   }
   .container-2 {
-    margin-top: -4.7em;
+    margin-top: -15em;
+    height: 70vh;
   }
   .inputs input {
-    padding: 1.1em;
-  }
-  .second-btn {
-    width: 90%;
-    margin-left: 1.6em;
-    margin-top: -0.2em;
-  }
-  .final-p {
-    font-size: 0.6rem;
-    margin-top: -1em;
-    margin-bottom: 3em;
-    line-height: 1.5rem;
+    margin-bottom: 1em;
+    margin-left: -0.5em;
+    padding: 1.4em;
   }
   .errorwrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin-top: -29px;
-    margin-bottom: 10px;
+    margin-top: -2.7em;
+    margin-bottom: 0.1em;
+  }
+  .denied {
+    margin-bottom: 0em;
+  }
+  .second-btn {
+    width: 103%;
+    margin-left: -0.5em;
+    margin-top: -0.22em;
+    margin-bottom: 1em;
+  }
+  .final-p {
+    font-size: 0.7rem;
+    margin-top: -2em;
+    line-height: 1.2rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

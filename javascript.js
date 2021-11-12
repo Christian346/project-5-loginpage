@@ -15,12 +15,11 @@ let errorMsg = document.querySelectorAll('.errorwrap')//select errorwrap classes
 let deniedMsg = document.querySelectorAll('.denied')//selects all denied classes
 let inputs = document.querySelectorAll('.input')// selects all inputs
 
-//inner variables
-var mailvalidation = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 //obj
 let expresiones = {
-    nombre: /^[a-zA-Z0-9\_\-]{1,40}$/,
-    segundonom: /^[a-zA-Z0-9\_\-]{1,40}$/,
+    nombre: /^[a-zA-Z ]{2,30}$/,
+    segundonom: /^[a-zA-Z ]{2,30}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password:/^\d{2,20}$/
     
@@ -146,6 +145,7 @@ form.addEventListener('submit' , (e)=>{
 e.preventDefault();
 if(campos.nombre && campos.segundonom && campos.email && campos.password){
     form.reset(); // will reset all campos if everything is alright
+    alert("Login was succesful!")
 }
 
 })
