@@ -71,6 +71,7 @@ body{
 
 .container-2{
     //  grid-area: container2;
+    //let height be automatic
     background-color:none;
     display: flex;
     flex-direction: column;
@@ -115,7 +116,7 @@ body{
 
 }
 .form{
-   
+   //let height be automatic
     background-color:hsl(0, 0%, 100%);
     box-shadow: 1px 5px 2px hsla(251, 20%, 39% , .5); //a for opacity
     border-radius: 7px;
@@ -221,8 +222,8 @@ body{
          margin-left:3em;
      }
      .container-2{
-        margin-top:-15em;
-      
+         //let height be automatic
+        margin-top:-15em; 
         margin-left: 3.6em;
     }
      
@@ -266,7 +267,7 @@ body{
         }
 
         .form{
-           
+           //let height be automatic
             width:115%;
             margin-left:-2.7em;
             margin-top: -1em;
@@ -312,8 +313,7 @@ body{
         
         .final-p{  
             font-size: 0.7rem;
-            margin-top:-1.5em;
-           
+            margin-top:-1.5em;  
             line-height: 1.49rem;
         }
 

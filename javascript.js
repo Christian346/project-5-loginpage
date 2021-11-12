@@ -21,7 +21,9 @@ let expresiones = {
     nombre: /^[a-zA-Z ]{1,30}$/,
     segundonom: /^[a-zA-Z ]{2,30}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    password:/^\d{2,20}$/
+    password:/^[a-zA-Z ]{3,15}$/
+    
+    //only digits:    /^\d{2,20}$/
     
 }
 //obj2
