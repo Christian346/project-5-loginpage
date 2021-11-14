@@ -21,13 +21,13 @@ let expresiones = {
     nombre: /^[a-zA-Z ]{1,30}$/,    // will except a name with at least two characters\s   
     segundonom: /^[A-Za-z0-9\'\s\.\,]+$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    password:/^[a-zA-Z0-9]{1,20}$/
+    password:/^[a-zA-Z0-9]{8,20}$/
     
     //only digits:    /^\d{2,20}$/
     
 }
 //obj2
-let campos = {
+let validated = {
     nombre: false,
     segundonom: false,
     email:false,
@@ -51,7 +51,7 @@ const validar= (e) =>{
                 document.getElementById('firstName').classList.remove('inputs-error')//step 2 
                 //could add another green class if you were to enter correct 
                 //switch campo to true
-                campos.nombre = true;
+                validated.nombre = true;
                 }
                 else{
                  
@@ -61,7 +61,7 @@ const validar= (e) =>{
                     document.getElementById('firstName').classList.add('inputs-error')//step 1 
 
                     //switch campo to true
-                    campos.nombre= false;
+                    validated.nombre= false;
                 }
        
         break;
@@ -75,7 +75,7 @@ const validar= (e) =>{
                 document.getElementById('lastName').classList.remove('inputs-error')//step 2  
               
                 //switch campo to true
-                 campos.segundonom= true;
+                 validated.segundonom= true;
                 }
                 else{
                  
@@ -83,7 +83,7 @@ const validar= (e) =>{
                     deniedMsg[1].style.display = 'flex'; 
                     
                     document.getElementById('lastName').classList.add('inputs-error')//step 1 
-                    campos.segundonom= false;
+                    validated.segundonom= false;
                 }
         
         break;
@@ -95,7 +95,7 @@ const validar= (e) =>{
                 deniedMsg[2].style.display = 'none'; 
                 
                 document.getElementById('Email').classList.remove('inputs-error')//step 2  
-                campos.email= true;
+                validated.email= true;
                 }
 
                 else{
@@ -104,7 +104,7 @@ const validar= (e) =>{
                     deniedMsg[2].style.display = 'flex'; 
                     
                     document.getElementById('Email').classList.add('inputs-error')//step 1 
-                    campos.email= false;
+                    validated.email= false;
                 }
         
         break;
@@ -116,7 +116,7 @@ const validar= (e) =>{
                 deniedMsg[3].style.display = 'none'; 
                 
                 document.getElementById('passWord').classList.remove('inputs-error')//step 2  
-                campos.password= true;
+                validated.password= true;
                 }
                 else{
                  
@@ -124,7 +124,7 @@ const validar= (e) =>{
                     deniedMsg[3].style.display = 'flex'; 
                     
                     document.getElementById('passWord').classList.add('inputs-error')//step 1 
-                    campos.password = false;
+                    validated.password = false;
                 }
         break;
     }
@@ -143,12 +143,33 @@ inputs.forEach((input)=>{
 //addevent listener for submit with button
 form.addEventListener('submit' , (e)=>{
 
- if(!campos.nombre && !campos.segundonom && !campos.email && !campos.password)   {
-    alert(" certain fields are empty please fill them to continue")
-    //make error display of field is empty  
- }
+ if(!validated.nombre){
+    errorMsg[0].style.display = 'flex'; 
+    deniedMsg[0].style.display = 'flex'; 
+    document.getElementById('firstName').classList.add('inputs-error')//step 1 
 
-if(campos.nombre && campos.segundonom && campos.email && campos.password){
+ } 
+ if(!validated.segundonom){
+    errorMsg[1].style.display = 'flex'; 
+    deniedMsg[1].style.display = 'flex'; 
+    
+    document.getElementById('lastName').classList.add('inputs-error')//step 1 
+
+ } if( !validated.email){
+    errorMsg[2].style.display = 'flex'; 
+    deniedMsg[2].style.display = 'flex'; 
+    
+    document.getElementById('Email').classList.add('inputs-error')//step 1 
+
+ }
+ if(!validated.password) {
+    errorMsg[3].style.display = 'flex'; 
+    deniedMsg[3].style.display = 'flex'; 
+    document.getElementById('passWord').classList.add('inputs-error')//step 1  
+ }
+//
+
+if(validated.nombre && validated.segundonom && validated.email && validated.password){
     form.reset(); // will reset all campos if everything is alright
     alert("Login was succesful!")
 }
