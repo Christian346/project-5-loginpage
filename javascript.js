@@ -25,6 +25,11 @@ let expresiones = {
     
     //only digits:    /^\d{2,20}$/
     
+    /*Regex for not empty and not whitespace
+    /^$|\s+/
+    if this matched theres whitespace
+    */
+    
 }
 //obj2
 let validated = {
